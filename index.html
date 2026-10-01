@@ -1,138 +1,140 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#050505">
-  <meta name="description" content="NEXOVA — More Than Just A Brand. Premium fashion, gadgets, perfumes, gifts and accessories.">
-  <title>NEXOVA | More Than Just A Brand</title>
-      <link rel="icon" href="nexova-logo.webp">
-    <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="NEXOVA — Premium fashion, perfumes, gifts, gadgets & beauty products.">
+  <title>NEXOVA — More Than Just a Brand</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div id="welcome" class="welcome-screen" aria-hidden="true">
+    <div class="welcome-glow"></div>
+    <div class="welcome-inner">
+      <div id="welcomeLogo" class="welcome-logo">N</div>
+      <div id="welcomeBrand" class="welcome-brand">NEXOVA</div>
+      <div class="welcome-sub">MORE THAN JUST A BRAND</div>
+      <div class="welcome-line"></div>
+      <div id="welcomeText" class="welcome-text">Welcome To NEXOVA</div>
+    </div>
+  </div>
 
-
-  <header class="topbar">
-    <button class="icon-btn mobile-only" id="menuBtn" aria-label="Open menu">☰</button>
-    <a class="brand" href="#">
-   <img src="nexova-logo.webp" alt="NEXOVA">
-
-      <span>NEXOVA</span>
-    </a>
-    <nav class="desktop-nav">
-      <a href="#home">Home</a><a href="#shop">Shop</a><a href="#hot">Hot Products</a><a href="#offers">Offers</a><a href="#about">About</a>
-    </nav>
-    <div class="header-actions">
-      <button class="icon-btn" id="searchBtn" title="Search">⌕</button>
-      <button class="icon-btn" id="wishlistBtn" title="Wishlist">♡</button>
-      <button class="cart-btn" id="cartBtn">🛒 <span>Cart</span><b id="cartCount">0</b></button>
+  <header class="site-header" id="siteHeader">
+    <div class="topbar">
+      <a class="brand" href="#top" aria-label="NEXOVA home">
+        <div id="brandMark" class="brand-mark">N</div>
+        <div>
+          <div id="brandName" class="brand-name">NEXOVA</div>
+          <div class="brand-tag">MORE THAN JUST A BRAND</div>
+        </div>
+      </a>
+      <div class="header-actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
+        <button class="icon-btn cart-pill" id="cartBtn" aria-label="Cart">🛒 <span id="cartCount">0</span></button>
+        <a class="icon-btn" href="https://wa.me/8801882243588" target="_blank" rel="noopener" aria-label="WhatsApp">☏</a>
+      </div>
+    </div>
+    <div class="search-bar" id="searchBar">
+      <div class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Product name, category বা budget লিখুন..."></div>
+      <button class="btn ghost" id="closeSearch">বন্ধ</button>
     </div>
   </header>
 
-  <div id="searchPanel" class="search-panel">
-    <input id="searchInput" placeholder="Search products, categories..." autocomplete="off">
-    <button class="gold-btn" id="searchClose">Close</button>
-  </div>
-
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-head">
-      <span>SHOP CATEGORIES</span><button id="closeMenu" class="icon-btn">×</button>
-    </div>
-    <button class="side-link active" data-cat="all">✦ All Products</button>
-    <button class="side-link" data-cat="hot">🔥 Hot Products</button>
-    <button class="side-link" data-cat="midrange">◈ Midrange Products</button>
-    <button class="side-link" data-cat="highrange">♛ High Range Products</button>
-    <div class="side-sep"></div>
-    <button class="side-link" data-cat="men">♂ Men's Collection</button>
-    <button class="side-link" data-cat="women">♀ Women's Collection</button>
-    <button class="side-link" data-cat="kids">♙ Kids Collection</button>
-    <div class="side-sep"></div>
-    <button class="side-link" data-cat="perfumes">Perfumes</button>
-    <button class="side-link" data-cat="gadgets">Gadgets</button>
-    <button class="side-link" data-cat="watch">Watches</button>
-    <button class="side-link" data-cat="sunglass">Sunglasses</button>
-    <button class="side-link" data-cat="phone-accessories">Phone Accessories</button>
-    <button class="side-link" data-cat="gift-box">Gift Boxes</button>
-    <button class="side-link" data-cat="shirt">Shirts</button>
-    <button class="side-link" data-cat="pant">Pants</button>
-    <button class="side-link" data-cat="t-shirt">T-Shirts</button>
-    <button class="side-link" data-cat="bracelet">Bracelets</button>
-    <button class="side-link" data-cat="beauty">Beauty Products</button>
-    <button class="side-link" data-cat="bike-accessories">Bike Accessories</button>
-    <button class="side-link" data-cat="mystery-box">Mystery Box</button>
-    <button class="side-link" data-cat="discount">Discount Products</button>
-  </aside>
-  <div class="overlay" id="overlay"></div>
-
-  <main id="home">
-    <section class="hero">
+  <main id="top">
+    <section class="hero section-wrap">
       <div class="hero-copy">
-        <p class="eyebrow">NEXOVA EXCLUSIVE</p>
-        <h1>More Than<br><em>Just A Brand.</em></h1>
-        <p>Premium products. Elegant choices. A shopping experience designed around you.</p>
+        <div class="eyebrow">NEXOVA COLLECTION <span></span> 2026</div>
+        <h1 id="heroTitle">Premium Products.<br><span>Smart Choices.</span></h1>
+        <p id="heroSubtitle">Perfume, fashion, gifts, gadgets & beauty—সব এক জায়গায়।</p>
         <div class="hero-actions">
-          <button class="gold-btn" onclick="scrollToShop()">Explore Collection</button>
-          <button class="ghost-btn" onclick="filterProducts('discount')">View Offers</button>
+          <button class="btn primary" data-filter="all">Shop Collection <span>→</span></button>
+          <button class="btn soft" id="hotJump">Hot Products <span>✦</span></button>
         </div>
-        <div class="trust-row"><span>✓ COD</span><span>✓ bKash</span><span>✓ Nagad</span><span>✓ Rocket</span></div>
+        <div class="mini-stats"><div><b>8+</b><span>Categories</span></div><div><b>Fast</b><span>Order Flow</span></div><div><b>AI</b><span>Bangla Support</span></div></div>
       </div>
-      <div class="hero-logo">
-        <div class="glow"></div>
-        <img src="assets/nexova-logo.webp" alt="NEXOVA luxury logo">
+      <div class="hero-art">
+        <div class="orb orb-1"></div><div class="orb orb-2"></div>
+        <div class="showcase-card">
+          <span class="showcase-badge">PREMIUM</span>
+          <div class="showcase-title">Discover your<br><strong>next favorite.</strong></div>
+          <div class="showcase-bottom"><span>Clean • Smooth • Personal</span><span>↗</span></div>
+        </div>
       </div>
     </section>
 
-    <section class="quick-cats">
-      <button onclick="filterProducts('men')">MEN</button>
-      <button onclick="filterProducts('women')">WOMEN</button>
-      <button onclick="filterProducts('kids')">KIDS</button>
-      <button onclick="filterProducts('perfumes')">PERFUMES</button>
-      <button onclick="filterProducts('gadgets')">GADGETS</button>
-      <button onclick="filterProducts('gift-box')">GIFT BOX</button>
-      <button onclick="filterProducts('discount')">DISCOUNTS</button>
+    <section class="section-wrap categories-section">
+      <div class="section-head"><div><div class="eyebrow">EXPLORE</div><h2>Shop by Category</h2></div><button class="text-btn" id="allCategories">View All →</button></div>
+      <div class="category-grid" id="categoryGrid"></div>
     </section>
 
-    <section id="hot" class="section">
-      <div class="section-title"><div><span>CURATED FOR YOU</span><h2>Hot Products</h2></div><button class="text-btn" onclick="filterProducts('hot')">View all →</button></div>
-      <div class="product-grid" id="hotGrid"></div>
+    <section class="section-wrap feature-section" id="features">
+      <div class="section-head"><div><div class="eyebrow">SMART FILTER</div><h2>Find it your way</h2></div><div class="feature-note">Range • Discount • Hot</div></div>
+      <div class="feature-grid">
+        <button class="feature-card" data-filter="high"><span class="feature-icon">♛</span><span><b>High Range</b><small>Premium picks</small></span></button>
+        <button class="feature-card" data-filter="mid"><span class="feature-icon">◈</span><span><b>Mid Range</b><small>Balanced value</small></span></button>
+        <button class="feature-card" data-filter="low"><span class="feature-icon">⌄</span><span><b>Low Budget</b><small>Smart savings</small></span></button>
+        <button class="feature-card" data-filter="discount"><span class="feature-icon">%</span><span><b>Discount</b><small>Offer products</small></span></button>
+        <button class="feature-card hot" data-filter="hot"><span class="feature-icon">✦</span><span><b>Hot Products</b><small>Popular now</small></span></button>
+      </div>
     </section>
 
-    <section id="shop" class="section">
-      <div class="section-title"><div><span>THE NEXOVA STORE</span><h2>Shop Collection</h2></div><div class="sort"><select id="sortSelect"><option value="featured">Featured</option><option value="low">Price: Low to High</option><option value="high">Price: High to Low</option><option value="discount">Biggest Discount</option></select></div></div>
-      <div class="active-filter" id="activeFilter">All Products</div>
-      <div class="product-grid" id="productGrid"></div>
+    <section class="section-wrap products-section" id="products">
+      <div class="section-head stack-mobile"><div><div class="eyebrow">CURATED FOR YOU</div><h2 id="productHeading">All Products</h2></div><div class="product-tools"><select id="sortSelect"><option value="featured">Featured</option><option value="priceAsc">Price low → high</option><option value="priceDesc">Price high → low</option><option value="newest">Newest</option></select><button class="btn filter-btn" id="filterBtn">☷ Filter</button></div></div>
+      <div id="activeFilters" class="active-filters"></div>
+      <div id="productGrid" class="product-grid"></div>
+      <div id="emptyState" class="empty-state hidden"><div class="empty-icon">⌕</div><h3>কোনো product পাওয়া যায়নি</h3><p>অন্য category, range বা search দিয়ে চেষ্টা করুন।</p><button class="btn primary" data-filter="all">সব products দেখুন</button></div>
     </section>
 
-    <section id="offers" class="offer-banner">
-      <div><span>LIMITED TIME</span><h2>Luxury Within Reach.</h2><p>Discover selected products with special NEXOVA pricing.</p></div>
-      <button class="gold-btn" onclick="filterProducts('discount')">Shop Discounts</button>
-    </section>
-
-    <section id="about" class="features">
-      <div><b>01</b><h3>Premium Selection</h3><p>Carefully curated products across fashion, beauty, gadgets and lifestyle.</p></div>
-      <div><b>02</b><h3>Easy Ordering</h3><p>Buy one product or build a multi-product cart in seconds.</p></div>
-      <div><b>03</b><h3>Flexible Payments</h3><p>COD plus bKash, Nagad, Rocket and online-payment-ready checkout.</p></div>
-      <div><b>04</b><h3>Customer Support</h3><p>Use the NEXOVA AI chat assistant or contact support directly.</p></div>
+    <section class="section-wrap trust-section">
+      <div class="trust-card"><div class="trust-icon">✓</div><div><b>Easy Ordering</b><span>Cart-এ একাধিক product যোগ করে একসাথে order করুন।</span></div></div>
+      <div class="trust-card"><div class="trust-icon">৳</div><div><b>Courier Included</b><span>Checkout-এ courier charge সহ final total পরিষ্কারভাবে দেখানো হবে।</span></div></div>
+      <div class="trust-card"><div class="trust-icon">☏</div><div><b>Human Help</b><span>প্রয়োজনে সরাসরি WhatsApp-এ NEXOVA team-এর সাথে যোগাযোগ করুন।</span></div></div>
     </section>
   </main>
 
-  <footer>
-    <div class="footer-brand"><img src="assets/nexova-logo.webp"><div><strong>NEXOVA</strong><small>MORE THAN JUST A BRAND</small></div></div>
-    <div><h4>Customer Care</h4><p>Order support<br>Delivery information<br>Returns & exchange</p></div>
-    <div><h4>Payments</h4><p>Cash on Delivery<br>bKash · Nagad · Rocket<br>Online payment ready</p></div>
-    <div><h4>Admin</h4><p><a href="admin.html">Admin Panel →</a></p></div>
+  <footer class="footer section-wrap">
+    <div><div class="footer-brand">NEXOVA</div><p>More Than Just a Brand.</p></div>
+    <div class="footer-links"><a id="facebookPage" href="https://www.facebook.com/share/1MrVbdQWcM/" target="_blank" rel="noopener">Facebook Page</a><a id="ownerLink" href="https://www.facebook.com/share/1GtiKbJHxv/" target="_blank" rel="noopener">Owner</a><a href="https://wa.me/8801882243588" target="_blank" rel="noopener">WhatsApp</a></div>
+    <div class="footer-bottom"><span>© <span id="year"></span> NEXOVA</span><span>Premium • Clean • User Friendly</span></div>
   </footer>
 
-  <button class="ai-fab" id="aiFab" title="NEXOVA AI">✦</button>
-  <div class="ai-chat" id="aiChat">
-    <div class="ai-head"><div><b>NEXOVA AI</b><small>Shopping Assistant</small></div><button id="aiClose">×</button></div>
-    <div class="ai-messages" id="aiMessages"><div class="ai-msg bot">Welcome to NEXOVA ✦<br>Ask me about products, prices, orders or categories.</div></div>
-    <div class="ai-input"><input id="aiInput" placeholder="Ask something..."><button id="aiSend">➤</button></div>
-    <small class="ai-note">AI mode can be connected to your own server-side OpenAI API key. Never put an API key in this page.</small>
+  <button id="aiFab" class="ai-fab" aria-label="NEXOVA Assistant"><span>✦</span><span class="ai-fab-text">AI Help</span></button>
+
+  <aside id="aiPanel" class="ai-panel" aria-label="NEXOVA AI Assistant">
+    <div class="ai-head"><div><b id="assistantName">NEXOVA Assistant</b><span>বাংলায় product খুঁজে দিন</span></div><button class="close-btn" id="closeAi">×</button></div>
+    <div id="aiMessages" class="ai-messages"></div>
+    <div class="ai-suggestions"><button data-ai="৳1000-এর মধ্যে perfume দেখাও">৳1000-এর মধ্যে perfume</button><button data-ai="Discount products দেখাও">Discount</button><button data-ai="Gift Box দেখাও">Gift Box</button></div>
+    <div class="ai-input"><input id="aiInput" placeholder="যেমন: Watch বা ১৫০০ টাকার gift box"><button id="aiSend">→</button></div>
+    <div class="ai-foot">Need human help? <a href="https://wa.me/8801882243588" target="_blank" rel="noopener">WhatsApp ↗</a></div>
+  </aside>
+
+  <div id="overlay" class="overlay hidden"></div>
+
+  <aside id="cartDrawer" class="drawer">
+    <div class="drawer-head"><div><div class="eyebrow">YOUR ORDER</div><h3>Your Cart</h3></div><button class="close-btn" id="closeCart">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="subtotal-line"><span>Subtotal</span><b id="cartSubtotal">৳0</b></div>
+      <div class="small-line"><span>Courier</span><span id="cartCourier">Checkout অনুযায়ী</span></div>
+      <button class="btn primary full" id="checkoutBtn">Checkout →</button>
+      <button class="btn ghost full" id="continueShopping">Continue Shopping</button>
+    </div>
+  </aside>
+
+  <div id="productModal" class="modal hidden">
+    <div class="modal-card product-modal-card"><button class="close-btn modal-close" data-close="productModal">×</button><div id="productModalBody"></div></div>
   </div>
 
-  <div class="modal" id="productModal"><div class="modal-card product-modal"><button class="modal-close" onclick="closeModal('productModal')">×</button><div id="productModalContent"></div></div></div>
-  <div class="modal" id="cartModal"><div class="modal-card cart-modal"><button class="modal-close" onclick="closeModal('cartModal')">×</button><h2>Your Cart</h2><div id="cartItems"></div><div id="cartSummary"></div></div></div>
-  <div class="modal" id="checkoutModal"><div class="modal-card checkout-modal"><button class="modal-close" onclick="closeModal('checkoutModal')">×</button><div id="checkoutContent"></div></div></div>
+  <div id="checkoutModal" class="modal hidden">
+    <div class="modal-card checkout-card"><button class="close-btn modal-close" data-close="checkoutModal">×</button><div class="checkout-head"><div class="eyebrow">SECURE ORDER FLOW</div><h2>Place Your Order</h2><p>Courier charge আপনার delivery location অনুযায়ী automatic যোগ হবে।</p></div><form id="checkoutForm"><div class="form-grid"><label>নাম<input name="name" required placeholder="আপনার নাম"></label><label>মোবাইল<input name="phone" required inputmode="tel" placeholder="01XXXXXXXXX"></label><label class="span-2">ঠিকানা<textarea name="address" required rows="3" placeholder="সম্পূর্ণ delivery address"></textarea></label><label>Delivery<select name="delivery"><option value="inside">ঢাকার ভিতরে — ৳80</option><option value="outside" selected>ঢাকার বাইরে — ৳130</option></select></label><label>নোট<textarea name="notes" rows="2" placeholder="Optional"></textarea></label></div><div class="checkout-summary" id="checkoutSummary"></div><button class="btn primary full" type="submit">Place Order ✓</button></form><div id="orderSuccess" class="order-success hidden"></div></div>
+  </div>
 
-  <script src="app.js"></script>
+  <div id="filterDrawer" class="drawer filter-drawer"><div class="drawer-head"><div><div class="eyebrow">FILTER</div><h3>Find Products</h3></div><button class="close-btn" id="closeFilter">×</button></div><div id="filterContent"></div></div>
+
+  <script src="assets/app.js" defer></script>
 </body>
 </html>

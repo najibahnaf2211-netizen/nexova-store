@@ -1,35 +1,72 @@
-# NEXOVA Luxury Store — Free Hosting Package
+# NEXOVA Premium Store
+
+একটি premium customer storefront + আলাদা admin panel + cart + checkout + courier charge + Bengali AI shopping assistant-এর ready-to-run project.
+
+## Run
+
+Node.js 18+ লাগবে। `npm install` দরকার নেই—server built-in Node modules ব্যবহার করে।
+
+```bash
+node server/index.js
+```
+
+তারপর:
+
+- Customer site: `http://localhost:3000/customer/`
+- Admin panel: `http://localhost:3000/admin/`
+
+## Admin demo login
+
+- Email: `admin@nexova.local`
+- Password: `change-this-password`
+
+Production-এ environment variable দিয়ে password পরিবর্তন করুন।
+
+```text
+ADMIN_EMAIL=your@email.com
+ADMIN_PASSWORD=your-strong-password
+PORT=3000
+```
+
+AI assistant-এর জন্য server-side OpenAI key দিতে পারেন:
+
+```text
+OPENAI_API_KEY=...
+OPENAI_MODEL=gpt-5.6-luna
+OPENAI_BASE_URL=https://api.openai.com/v1/responses
+```
+
+Key frontend-এর JavaScript-এ রাখবেন না। API key না থাকলেও NEXOVA assistant product search ও Bengali fallback mode-এ কাজ করবে।
 
 ## Included
-- Premium responsive storefront
-- Left category navigation + mobile drawer
-- Search, sorting, wishlist
-- Product detail + Order Now
-- Multi-product cart + checkout
-- COD / bKash / Nagad / Rocket / Online Payment selections
-- WhatsApp order handoff
-- Admin panel: add/edit/delete products, discounts, tags and orders
-- NEXOVA AI chat UI
-- Optional Vercel serverless `/api/chat.js` for real OpenAI-powered chat
 
-## Demo Admin Login
-User ID: `Nexova`
-Password: `Sajid001188`
+- 1-second animated “Welcome To NEXOVA” intro
+- Premium dark / gold clean interface
+- NEXOVA logo support + admin logo change/delete
+- 8 main categories
+- Men subcategories: Bracelet, Watch, Sunglass, Shirt, T-Shirt, Pant, Perfume, Helmet, Accessories
+- Women subcategories: শাড়ী, জামা, এক্সেসরিস, কসমেটিকস, ব্যাগ, জুয়েলারি, পারফিউম, অন্যান্য
+- Combo, Gift Box, Kids, Gadgets, Beauty
+- High / Mid / Low / Discount / Hot filters
+- Search + sort
+- Product details modal
+- Order Now + Add to Cart
+- Multi-product cart
+- Color and Size options per product, separately ON/OFF
+- Stock / Out of Stock
+- Courier charge: Dhaka / Outside Dhaka
+- Customer order form + order ID
+- Separate Admin Panel
+- Product add/edit/delete + images + price + discount + range + flags + stock
+- Homepage option visibility and subcategory editing
+- Customer product views count
+- Customer orders in Admin Panel
+- Order status control
+- WhatsApp support: 01882243588
+- Facebook Page and Owner links prefilled
 
-IMPORTANT: This login is client-side for the free static demo. Anyone who can inspect the website files can discover it. For a real business, use server-side authentication/database.
+## Important production note
 
-## Free deployment
-### Vercel
-1. Upload this folder to a GitHub repository.
-2. Import the repository into Vercel.
-3. Deploy with the default settings.
-4. You will get a free `*.vercel.app` address.
+এই version-এ data `server/data/db.json`-এ রাখা হয়, তাই local/demo use-এর জন্য সহজ। Production-এ multi-device persistent order system চালাতে a real database (যেমন Supabase/Postgres) যুক্ত করা উচিত। UI এবং API structure সেই integration-এর জন্য সহজে extend করা যাবে।
 
-### GitHub Pages
-The storefront can also run as a static GitHub Pages site. The admin and browser-local order storage are demo features; shared production orders require a database/backend.
-
-## Payments
-The payment buttons/options are UI-ready. Live bKash/Nagad/Rocket/online payment processing requires the appropriate merchant credentials and a supported payment gateway/backend. Those credentials should never be exposed in client-side code.
-
-## AI
-The visible storefront includes a local shopping assistant. For real OpenAI-powered replies, deploy `api/chat.js` on Vercel and set `OPENAI_API_KEY` as a Vercel environment variable. API usage may incur separate charges; hosting can remain free within the hosting provider's free allowance.
+`server/data/db.json`-এ থাকা demo image URLs এবং products Admin Panel থেকে replace/add/edit করা যাবে।
