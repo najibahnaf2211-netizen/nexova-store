@@ -1,5 +1,6 @@
 // NEXOVA Admin Logic
 const ADMIN_PASS = 'Sajid001188';
+const LOGO_URL = 'https://i.ibb.co/3ykXWjG/nexova-logo.jpg';
 
 function login() {
   const pass = document.getElementById('pass').value;
@@ -21,7 +22,7 @@ function loadAdminProducts() {
   grid.innerHTML = products.map(p => `
     <div class="admin-card">
       <div class="thumb">
-        <img src="${p.image || 'nexova-logo.webp'}" onerror="this.src='nexova-logo.webp'">
+        <img src="${p.image || LOGO_URL}" onerror="this.src='${LOGO_URL}'">
       </div>
       <h4>${p.name}</h4>
       <div class="prices">
