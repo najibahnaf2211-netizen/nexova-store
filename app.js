@@ -1,4 +1,6 @@
 // NEXOVA - Main Store Application Logic
+const LOGO_URL = 'https://i.ibb.co/3ykXWjG/nexova-logo.jpg';
+
 const DEFAULT_PRODUCTS = [
   {
     id: 'p1',
@@ -7,7 +9,7 @@ const DEFAULT_PRODUCTS = [
     oldPrice: 1299,
     category: 'perfumes',
     tags: ['hot', 'discount', 'men', 'women'],
-    image: 'nexova-logo.webp',
+    image: LOGO_URL,
     inStock: true,
     colors: ['Gold Edition', 'Dark Chocolate'],
     description: 'A fragrance that tastes like happiness. Rich, sweet and seductive chocolate note perfume.'
@@ -78,7 +80,7 @@ function createProductCard(p) {
   return `
     <div class="product-card ${!p.inStock ? 'out-of-stock' : ''}">
       <div class="product-image">
-        ${p.image ? `<img src="${p.image}" alt="${p.name}" onerror="this.src='nexova-logo.webp'">` : `<div class="placeholder-icon">✦</div>`}
+        ${p.image ? `<img src="${p.image}" alt="${p.name}" onerror="this.src='${LOGO_URL}'">` : `<div class="placeholder-icon">✦</div>`}
         ${isDiscount ? `<span class="discount-badge">-${discountPercent}% OFF</span>` : ''}
         ${!p.inStock ? `<span class="stock-badge">STOCK OUT</span>` : ''}
       </div>
@@ -110,7 +112,7 @@ function openProductModal(id) {
   content.innerHTML = `
     <div class="product-modal-grid">
       <div class="large-image">
-        <img src="${p.image || 'nexova-logo.webp'}" alt="${p.name}">
+        <img src="${p.image || LOGO_URL}" alt="${p.name}">
       </div>
       <div>
         <h2>${p.name}</h2>
@@ -226,7 +228,7 @@ function renderCartModal() {
 
   container.innerHTML = cart.map((item, idx) => `
     <div class="cart-row">
-      <div class="cart-thumb"><img src="${item.image || 'nexova-logo.webp'}"></div>
+      <div class="cart-thumb"><img src="${item.image || LOGO_URL}"></div>
       <div>
         <h4>${item.name}</h4>
         <small>৳${item.price}</small>
